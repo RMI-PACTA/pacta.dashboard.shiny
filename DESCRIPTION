@@ -22,5 +22,6 @@ Imports:
     bslib,
     dplyr,
     ggplot2,
+    htmltools,
     logger,
     shiny
