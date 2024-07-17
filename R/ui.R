@@ -1,5 +1,9 @@
 # Modified from https://rstudio.github.io/bslib/articles/dashboards/index.html
 ui <- bslib::page_navbar(
+  theme = bslib::bs_theme(
+    version = 5,
+    preset = "shiny",
+  ),
   title = "PACTA Climate Alignment Tool",
   bslib::nav_panel(
     title = "PACTA Intro",
