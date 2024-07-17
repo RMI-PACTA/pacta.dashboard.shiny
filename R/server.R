@@ -1,10 +1,15 @@
 # https://github.com/rstudio/shiny-examples/blob/main/083-front-page/server.R
 server <- function(input, output) {
+  foo <- data.frame(
+    x = stats::rpois(30L, 5L),
+    y = round(stats::rnorm(30L) * 3L, 0L)
+  )
+
   output[["gear"]] <- shiny::renderPlot({
     logger::log_debug("Rendering Gear Plot")
     ggplot2::ggplot(
-      mtcars,
-      ggplot2::aes(.data[["gear"]])
+      foo,
+      ggplot2::aes(.data[["x"]])
     ) +
       ggplot2::geom_bar()
   })
@@ -12,8 +17,8 @@ server <- function(input, output) {
   output[["carb"]] <- shiny::renderPlot({
     logger::log_debug("Rendering Carb Plot")
     ggplot2::ggplot(
-      mtcars,
-      ggplot2::aes(.data[["carb"]])
+      foo,
+      ggplot2::aes(.data[["y"]])
     ) +
       ggplot2::geom_bar()
   })
