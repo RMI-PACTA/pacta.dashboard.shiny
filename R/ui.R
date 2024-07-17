@@ -12,7 +12,7 @@ ui <- function() {
     ),
     bslib::nav_panel(
       title = "Executive Summary",
-      htmltools::p("This is the Executive Summary page.")
+      page_executive_summary
     ),
     bslib::nav_panel(
       title = "Portfolio-level Overview",
