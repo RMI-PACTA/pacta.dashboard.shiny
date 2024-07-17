@@ -34,6 +34,7 @@ ui <- function() {
       bslib::nav_item(link_contact),
       bslib::nav_item(link_rmi_gh),
       align = "right"
-    )
+    ),
+    htmltools::p("Built with love by the PACTA team at RMI.")
   )
 }
