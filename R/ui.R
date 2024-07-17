@@ -16,15 +16,15 @@ ui <- function() {
     ),
     bslib::nav_panel(
       title = "Portfolio-level Overview",
-      htmltools::p("This is the Portfolio-level Overview page.")
+      page_portfolio_overview
     ),
     bslib::nav_panel(
       title = "Sector-level Analysis",
-      htmltools::p("This is the Sector-level Analysis page.")
+      page_sector_analysis
     ),
     bslib::nav_panel(
       title = "Company-level Analysis",
-      htmltools::p("Coming Soon... This is the Company-level Analysis page.")
+      page_company_analysis
     ),
     bslib::nav_spacer(),
     bslib::nav_menu(
