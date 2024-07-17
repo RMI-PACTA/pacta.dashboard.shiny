@@ -1,7 +1,7 @@
 run_dashboard <- function() {
   log_info("Running dashboard")
   shiny::shinyApp(
-    ui = ui,
+    ui = ui(),
     server = server
   )
 }
