@@ -1,6 +1,8 @@
 #' @keywords internal
 "_PACKAGE"
 
+utils::globalVariables(".data")
+
 ## usethis namespace: start
 #' @importFrom logger log_debug
 #' @importFrom logger log_fatal

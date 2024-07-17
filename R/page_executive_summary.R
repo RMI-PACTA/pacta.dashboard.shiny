@@ -14,7 +14,7 @@ vbs <- list(
   ),
   bslib::value_box(
     title = "3rd value",
-    value = "4.3 / 10",
+    value = "4.3 out of 10",
     showcase = shiny::icon("chart-pie"),
     htmltools::p("The 4th detail"),
     htmltools::p("The 5th detail"),
@@ -40,12 +40,12 @@ page_executive_summary <- bslib::page_fillable(
     bslib::card(
       full_screen = TRUE,
       bslib::card_header("Number of forward gears"),
-      plotOutput("gear")
+      shiny::plotOutput("gear")
     ),
     bslib::card(
       full_screen = TRUE,
       bslib::card_header("Number of carburetors"),
-      plotOutput("carb")
+      shiny::plotOutput("carb")
     )
   )
 )
