@@ -9,7 +9,7 @@ page_sector_analysis <- function() {
           min = 0L, max = 1L, value = 1L, step = 0.05
         )
       )
-      ),
+    ),
     bslib::layout_columns(
       bslib::card(
         full_screen = TRUE,
@@ -17,7 +17,7 @@ page_sector_analysis <- function() {
         tech_exposure_script(),
         tech_exposure_data(),
         r2d3::d3Output("techmix")
-        ),
+      ),
       bslib::card(
         full_screen = FALSE,
         bslib::card_header("Look, it's Text!"),
