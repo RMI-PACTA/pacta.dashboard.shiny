@@ -5,6 +5,15 @@ server <- function(input, output) {
     y = round(stats::rnorm(30L) * 3L, 0L)
   )
 
+  output[["techmix"]] <- r2d3::renderD3({
+    logger::log_debug("Rendering TechMix Plot")
+    logger::log_trace("bar_max: {input$bar_max}")
+    r2d3::r2d3(
+      stats::runif(5L, 0L, input[["bar_max"]]),
+      script = system.file("examples", "baranims.js", package = "r2d3")
+    )
+  })
+
   output[["gear"]] <- shiny::renderPlot({
     logger::log_debug("Rendering Gear Plot")
     ggplot2::ggplot(

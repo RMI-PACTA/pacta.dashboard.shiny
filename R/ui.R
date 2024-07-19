@@ -20,7 +20,7 @@ ui <- function() {
     ),
     bslib::nav_panel(
       title = "Sector-level Analysis",
-      page_sector_analysis
+      page_sector_analysis()
     ),
     bslib::nav_panel(
       title = "Company-level Analysis",
@@ -34,7 +34,6 @@ ui <- function() {
       bslib::nav_item(link_contact),
       bslib::nav_item(link_rmi_gh),
       align = "right"
-    ),
-    htmltools::p("Built with love by the PACTA team at RMI.")
+    )
   )
 }
